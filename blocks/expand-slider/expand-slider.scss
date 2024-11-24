@@ -1,0 +1,35 @@
+/* Basic Slider Styling */
+.glide.glide-expand-img {
+    .glide__slides {
+        display: flex;
+        overflow: hidden; // Hides overflow for a clean look
+    }
+
+    .glide__slide {
+        display: flex;
+        height: auto;
+        min-height: 600px;
+    }
+
+    .glide__slide.is-visible {
+        flex: 1;
+    }
+
+    .glide__slide:hover {
+        flex-grow: 2; // Expands the hovered slide
+        transition: flex 0.3s ease;
+    }
+}
+
+.service {
+    &__link {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow: 1;
+        transition: all 0.5s ease-in-out;
+    }
+}

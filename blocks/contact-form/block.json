@@ -1,0 +1,17 @@
+{
+    "name": "acf/contact-form",
+    "title": "Contact form",
+    "description": "contact-form section",
+    "style": [ "file:./contact-form.css" ],
+    "script": [ "file:./contact-form.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["contact-form", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contact-form.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

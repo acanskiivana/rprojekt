@@ -1,0 +1,17 @@
+{
+    "name": "acf/testimonial-slider",
+    "title": "testimonial-slider",
+    "description": "testimonial-slider section",
+    "style": [ "file:./testimonial-slider.css" ],
+    "script": [ "file:./testimonial-slider.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["testimonial-slider", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "testimonial-slider.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

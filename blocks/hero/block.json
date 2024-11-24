@@ -1,0 +1,17 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "Hero section",
+    "style": [ "file:./hero.css" ],
+    "script": [ "file:./hero.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["hero", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

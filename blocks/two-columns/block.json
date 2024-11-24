@@ -1,0 +1,17 @@
+{
+    "name": "acf/two-columns",
+    "title": "Two columns - image and text",
+    "description": "two-columns section",
+    "style": [ "file:./two-columns.css" ],
+    "script": [ "file:./two-columns.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Two columns", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "two-columns.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "acf/expand-slider",
+    "title": "Show all services - expand slider",
+    "description": "Show all services in expand slider",
+    "style": [ "file:./expand-slider.css" ],
+    "script": [ "file:./expand-slider.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["expand-slider", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "expand-slider.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

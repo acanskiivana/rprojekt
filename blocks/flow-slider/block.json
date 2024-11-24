@@ -1,0 +1,17 @@
+{
+    "name": "acf/flow-slider",
+    "title": "Flow slider",
+    "description": "Flow slider",
+    "style": [ "file:./flow-slider.css" ],
+    "script": [ "file:./flow-slider.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["flow-slider", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "flow-slider.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
