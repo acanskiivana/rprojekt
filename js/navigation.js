@@ -2,36 +2,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Select all menu items that have a submenu
     var menuItems = document.querySelectorAll('.main-navigation ul li:has(ul) > a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#site-navigation');
 
     menuItems.forEach(function (item) {
         item.addEventListener('click', function (e) {
             // Prevent the default link behavior
             e.preventDefault();
-
             // Get the submenu
-            var submenu = this.nextElementSibling;
+            var menuItemHasChildren = this.parentElement;
 
-            // Smooth toggle: Check if the submenu is open
-            if (submenu.style.maxHeight) {
-                // Close the submenu
-                submenu.style.maxHeight = null;
-                submenu.style.opacity = 0;
-                submenu.style.visibility = 'hidden';
-            } else {
-                // Open the submenu
-                submenu.style.maxHeight = submenu.scrollHeight + "px";
-
-                submenu.style.opacity = 1;
-                submenu.style.visibility = 'visible';
-            }
+            menuItemHasChildren.classList.toggle('active');
         });
+
     });
 
-	// Navigation toggle button
-	const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('#site-navigation');
+    // Close navigation when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            // Close the submenu
+            const allActive = document.querySelectorAll('.active');
 
-    menuToggle.addEventListener('click', function() {
+            allActive.forEach(element => {
+                element.classList.remove('active');
+            })
+
+        }
+    });
+
+    menuToggle.addEventListener('click', function () {
         // Toggle the menu open/close class
         var isOpen = menu.classList.toggle('menu-open');
         // Update aria-expanded attribute
@@ -44,6 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.remove('no-scroll');
         }
     });
-
 
 });

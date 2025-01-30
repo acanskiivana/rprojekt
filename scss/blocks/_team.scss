@@ -1,0 +1,30 @@
+.team {
+
+    &__column {
+        border: 1px solid red;
+        padding: 8rem 2rem 2rem 2rem;
+        border-radius: 10px;
+        min-height: 300px;
+        display: flex;
+        align-items: flex-end;
+
+    }
+
+    &__info {
+        border: 1px solid grey;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    &__position {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}

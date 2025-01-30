@@ -1,7 +1,70 @@
 /**
  * Basic typography style for copy text
  */
-body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+h1 {
+  @extend %size_h1;
+  margin: 0 0 18px 0;
+
+  @include respond-to('medium') {
+    margin: 0 0 24px 0;
+  }
+
+  @include respond-to('xlarge') {
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+h2,
+.h2 {
+  @extend %size_h2;
+  margin: 0 0 18px 0;
+
+  @include respond-to('medium') {
+    margin: 0 0 24px 0;
+  }
+
+  @include respond-to('xlarge') {
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+h3,
+.h3 {
+  @extend %size_h3;
+  margin: 0 0 18px 0;
+
+  @include respond-to('medium') {
+    margin: 0 0 24px 0;
+  }
+
+  @include respond-to('xlarge') {
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+h4,
+.h4 {
+  @extend %size_h4;
+  margin: 0 0 1.4rem 0;
+}
+
+h5 {
+  @extend %size_h5;
+  margin: 0 0 1.4rem 0;
+}
+
+h6 {
+  @extend %size_h6;
+  margin: 0 0 1.4rem 0;
 }

@@ -50,28 +50,23 @@
 
     /* Submenu styles */
     li ul {
-        position: static;
+        display: none;
         width: 100%;
         background-color: #444;
         padding: 0;
-        opacity: 0;
-        visibility: hidden;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
+        // transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
-    li.active>ul {
-        display: block;
-        max-height: 500px;
-        /* Adjust this value as needed */
-        opacity: 1;
-        visibility: visible;
-    }
 
     li ul a {
         padding: 10px;
         white-space: nowrap;
+    }
+
+    .active {
+        .sub-menu {
+            display: block;
+        }
     }
 }
 
@@ -118,7 +113,6 @@
         flex-direction: row;
         justify-content: center;
         display: flex;
-        /* Show menu on larger screens */
         background-color: transparent;
         position: inherit;
         width: auto;
@@ -126,7 +120,7 @@
         padding-top: inherit;
         overflow: unset;
 
-        ul {
+        .menu {
             flex-direction: row;
             display: flex;
         }
@@ -140,16 +134,13 @@
                 left: 0;
                 background-color: #444;
                 min-width: 150px;
-                padding: 0;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease, visibility 0.3s ease;
+                width: auto;
+
             }
 
             &:hover>ul {
                 display: block;
-                opacity: 1;
-                visibility: visible;
+
             }
 
             a {

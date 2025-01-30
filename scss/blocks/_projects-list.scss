@@ -1,0 +1,9 @@
+.projects-list {
+    &__column {
+        display: block;
+        border: 1px solid red;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+}

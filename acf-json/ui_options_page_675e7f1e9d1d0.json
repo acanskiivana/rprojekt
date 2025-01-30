@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_675e7f1e9d1d0",
+    "title": "Testimonial slider",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Testimonial slider",
+    "menu_slug": "testimonial-slider",
+    "parent_slug": "none",
+    "advanced_configuration": false,
+    "icon_url": "",
+    "menu_title": "",
+    "position": null,
+    "redirect": false,
+    "description": "",
+    "menu_icon": [],
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": false,
+    "modified": 1734246174
+}

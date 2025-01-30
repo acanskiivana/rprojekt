@@ -1,0 +1,18 @@
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    z-index: 2;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  &__content {
+    background-color: blue;
+    max-width: 600px;
+  }
+
+}

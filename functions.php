@@ -109,7 +109,7 @@ function rp_custom_post_type() {
 		array(
 			'labels' => array(
 				'name' =>__('Services', 'textdomain'),
-				'singular_name' => __('Products', 'textdomain'),
+				'singular_name' => __('Services', 'textdomain'),
 			),
 			'public' => true, 
 			'has_archive' => true,
@@ -161,15 +161,20 @@ add_action( 'widgets_init', 'rijeka_projekt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function rijeka_projekt_scripts() {
+	
 	wp_enqueue_style( 'rijeka_projekt-main-style', get_stylesheet_uri(), array(), rijeka_PROJEKT_VERSION );
 
 	wp_enqueue_style( 'rijeka_projekt-style', get_template_directory_uri() . '/css/style.css', array(), rijeka_PROJEKT_VERSION );
+
+	wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), rijeka_PROJEKT_VERSION );
 
 	wp_enqueue_style( 'glide_core_css', get_template_directory_uri() . '/css/glide.core.min.css', array(), rijeka_PROJEKT_VERSION );
 
 	// wp_enqueue_style( 'glide_theme_css', get_template_directory_uri() . '/css/glide.theme.min.css', array(), rijeka_PROJEKT_VERSION );
 
 	wp_enqueue_script( 'rijeka_projekt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), rijeka_PROJEKT_VERSION, true );
+
+	wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), rijeka_PROJEKT_VERSION, true );
 
 	wp_enqueue_script( 'qlide-js', get_template_directory_uri() . '/js/glide.min.js', array(), rijeka_PROJEKT_VERSION, true );
 
@@ -206,11 +211,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
 /**
  * Acf / Advance Custom Theme.
  */
 require get_template_directory() . '/inc/acf-blocks.php';
+
 
 
 

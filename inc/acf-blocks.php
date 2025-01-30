@@ -9,6 +9,9 @@ function rijekaprojekt_register_acf_blocks() {
     register_block_type( get_template_directory() . '/blocks/contact-form/' );
     register_block_type( get_template_directory() . '/blocks/expand-slider/' );
     register_block_type( get_template_directory() . '/blocks/testimonial-slider/' );
+    register_block_type( get_template_directory() . '/blocks/projects-list/' );
+    register_block_type( get_template_directory() . '/blocks/team/' );
+    register_block_type( get_template_directory() . '/blocks/history-slider/' );
 }
 add_action('init', 'rijekaprojekt_register_acf_blocks');
 
@@ -23,6 +26,7 @@ function my_acf_json_load_point( $paths ) {
     return $paths;    
 }
 add_filter( 'acf/settings/load_json', 'my_acf_json_load_point' );
+
 
 
 ?>

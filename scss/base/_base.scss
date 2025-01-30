@@ -7,6 +7,24 @@
  */
 html {
   box-sizing: border-box;
+  font-size: 38%;
+  font-style: normal;
+
+  @include respond-to('medium') {
+    font-size: 40%;
+  }
+
+  @include respond-to('large') {
+    font-size: 58.25%;
+  }
+
+  @include respond-to('xlarge') {
+    font-size: 62.25%;
+  }
+
+  @include respond-to('xxlarge') {
+    font-size: 68%;
+  }
 }
 
 /**
@@ -34,7 +52,7 @@ a {
   }
 }
 
-
 body {
-  background-color: blue($color: #000000);
+  font-color: $text-color;
+  @extend %base;
 }

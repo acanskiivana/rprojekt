@@ -1,0 +1,128 @@
+.history-slider {
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    &__numbers {
+        display: flex;
+        position: relative;
+
+    }
+
+    &__small-numbers {
+        display: flex;
+        flex-direction: row;
+
+
+    }
+
+    &__number {
+        display: inline-block;
+        font-size: 80px;
+        opacity: 0.5;
+
+        /* Smooth animation */
+        &--large {
+            font-weight: 700;
+            flex-grow: 4;
+            flex-basis: 70%;
+            opacity: 1;
+            z-index: 2;
+            transform: translateX(0);
+        }
+
+        &--small {
+            margin: 0 20px;
+            flex-shrink: 0;
+            z-index: 1;
+
+            &:nth-of-type(1) {
+                position: absolute;
+                right: 170px;
+            }
+        }
+    }
+}
+
+.history-slider__number--small.animated-small-number-one {
+    color: rgb(255, 0, 225);
+    right: calc(100% - 180px);
+    opacity: 0.5;
+    transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+.history-slider__number--small.animated-small-number-two {
+    color: green;
+    transform: translateX(-100%);
+    opacity: 0.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+.animated-large-number {
+    color: red;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+
+.animated-test {
+    animation-name: example;
+    animation-duration: 0.3s;
+}
+
+/* The animation code */
+@keyframes example {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+}
+
+@keyframes example2 {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(-100);
+        opacity: 0.5;
+    }
+}
+
+
+
+// /* Animation classes */
+// .history-slider__number.slide-to-large {
+//     transition: transform 3s ease, opacity 3s ease;
+//     transform: translateX(-800px);
+//     opacity: 0;
+//     z-index: 3;
+// }
+
+
+// .history-slider__number.slide-to-next {
+//     transition: transform 5s ease, opacity 5s ease;
+//     transform: translateX(-125%);
+//     opacity: 0.7;
+//     z-index: 2;
+// }
+
+
+// .history-slider__number.enter {
+//     transition: transform 3s ease, opacity 3s ease;
+//     transform: translateX(100%);
+//     // opacity: 0;
+//     z-index: 1;
+// }

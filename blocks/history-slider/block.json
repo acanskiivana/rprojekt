@@ -1,0 +1,16 @@
+{
+    "name": "acf/history-slider",
+    "title": "History slider",
+    "description": "History slider",
+    "script": [ "file:./history-slider.js" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["history-slider", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "history-slider.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

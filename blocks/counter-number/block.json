@@ -2,13 +2,12 @@
     "name": "acf/counter-number",
     "title": "Counter number",
     "description": "Counter number",
-    "style": [ "file:./counter-number.css" ],
     "script": [ "file:./counter-number.js" ],
     "category": "formatting",
     "icon": "admin-comments",
     "keywords": ["counter-number", "quote"],
     "acf": {
-        "mode": "preview",
+        "mode": "auto",
         "renderTemplate": "counter-number.php"
     },
     "supports": {

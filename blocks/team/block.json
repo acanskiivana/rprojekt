@@ -1,0 +1,15 @@
+{
+    "name": "acf/team",
+    "title": "team",
+    "description": "Add Team ",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["team", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "team.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -2,7 +2,6 @@
     "name": "acf/testimonial-slider",
     "title": "testimonial-slider",
     "description": "testimonial-slider section",
-    "style": [ "file:./testimonial-slider.css" ],
     "script": [ "file:./testimonial-slider.js" ],
     "category": "formatting",
     "icon": "admin-comments",

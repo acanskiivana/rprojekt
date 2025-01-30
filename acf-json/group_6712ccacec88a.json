@@ -5,7 +5,7 @@
         {
             "key": "field_6712ccaf7a769",
             "label": "Title",
-            "name": "title",
+            "name": "two_columns_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -26,7 +26,7 @@
         {
             "key": "field_6712cce77a76a",
             "label": "Content",
-            "name": "content",
+            "name": "two_columns_content",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -47,7 +47,7 @@
         {
             "key": "field_6712ccf17a76b",
             "label": "Button link",
-            "name": "button_link",
+            "name": "two_columns_button_link",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -64,7 +64,7 @@
         {
             "key": "field_6712cd2a7a76c",
             "label": "Image",
-            "name": "image",
+            "name": "two_columns_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -95,6 +95,13 @@
                 "operator": "==",
                 "value": "acf\/two-columns"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rp_services"
+            }
         ]
     ],
     "menu_order": 0,
@@ -106,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729286285
+    "modified": 1734245007
 }

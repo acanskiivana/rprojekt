@@ -4,11 +4,11 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$title-font: 'Roboto';
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$content-font: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -44,3 +44,6 @@ $xxlarge: 1600px;
 $huge: 1930px;
 // Grid container 
 $gap-size: 20px;
+
+$padding-large: 6rem;
+$padding-small: 3rem;

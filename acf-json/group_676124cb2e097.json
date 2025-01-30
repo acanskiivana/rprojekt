@@ -1,9 +1,9 @@
 {
-    "key": "group_6730c3bda6da8",
-    "title": "Two columns",
+    "key": "group_676124cb2e097",
+    "title": "History slider",
     "fields": [
         {
-            "key": "field_6730c3bef2ed6",
+            "key": "field_676124cb93c4a",
             "label": "",
             "name": "",
             "aria-label": "",
@@ -29,7 +29,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/two-columns"
+                "value": "acf\/history-slider"
             }
         ]
     ],
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731249101
+    "modified": 1734419802
 }

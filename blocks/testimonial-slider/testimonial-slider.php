@@ -5,22 +5,44 @@ if( !function_exists('get_field') ) {
 }
 ?>
 
-<?php // Load values and assign defaults. ?>
-
+<?php 
+// Fetch ACF fields 
+$testimonial_section_title = get_field('testimonail_section_title', 'option');
+?>
 
 <!-- Testimonial slider  -->
-<section class="container">
-    <div class="glide glide-center testimonials">
-        <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <li class="glide__slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eaque pariatur maiores eveniet nisi sed quidem enim officiis, nesciunt quae.</li>
-                <li class="glide__slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, temporibus? Excepturi suscipit repellat explicabo in quae exercitationem, laboriosam corporis reiciendis ut? Velit eum esse iusto voluptas odio reiciendis, debitis sint.</li>
-                <li class="glide__slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos officiis sapiente earum? Quo non animi nihil iste possimus ratione recusandae doloremque sapiente, officiis totam dolorem minus magni sed optio, esse id temporibus deserunt dolore odit ducimus perspiciatis? Dicta similique tempore, quod optio pariatur odit repellat ipsam nobis expedita. Numquam?</li>
-                <li class="glide__slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eaque pariatur maiores eveniet nisi sed quidem enim officiis, nesciunt quae.</li>
-                <li class="glide__slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, temporibus? Excepturi suscipit repellat explicabo in quae exercitationem, laboriosam corporis reiciendis ut? Velit eum esse iusto voluptas odio reiciendis, debitis sint.</li>
-                <li class="glide__slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos officiis sapiente earum? Quo non animi nihil iste possimus ratione recusandae doloremque sapiente, officiis totam dolorem minus magni sed optio, esse id temporibus deserunt dolore odit ducimus perspiciatis? Dicta similique tempore, quod optio pariatur odit repellat ipsam nobis expedita. Numquam?</li>
-            </ul>
+<section class="">
+    <h2><?php echo esc_html( $testimonial_section_title ); ?></h2>
+
+    <?php if ( have_rows('testimonial_slide', 'option') ) : ?>
+        <div class="glide glide-center testimonial">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <?php while( have_rows('testimonial_slide', 'option') ) : the_row(); ?>
+                   
+                        <?php 
+                        // Fetch ACF fields 
+                        $testimonial_quote = get_sub_field('testimonial_quote', 'option');
+                        $testimonial_author_name = get_sub_field('testimonial_author_name', 'option');
+                        $testimonial_author_job_position = get_sub_field('testimonial_author_job_position', 'option');
+                        ?>
+
+                        <li class="glide__slide testimonial__slide">
+                            <?php if(  $testimonial_quote ): ?>
+                                <p class="testimonial__quote"><?php echo esc_html( $testimonial_quote ); ?></p>
+                            <?php endif; ?>
+                            <?php if(  $testimonial_quote ): ?>
+                                <h6 class="testimonial__author-name"><?php echo esc_html( $testimonial_author_name ); ?></h6>
+                            <?php endif; ?>
+                            <?php if(  $testimonial_author_job_position ): ?>
+                                <h6 class="testomonial__author-job"><?php echo esc_html( $testimonial_author_job_position ); ?></h6>
+                            <?php endif; ?>
+                        </li>
+
+                    <?php endwhile; ?>
+                </ul>
+            </div>
         </div>
-       
-    </div>
-</div>
+
+    <?php endif; ?>
+</section>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const counters = document.querySelectorAll('.number-counter__number');
+    const counters = document.querySelectorAll('.counter-number--js .counter-number__number');
 
     // Function to update each counter
     const updateCounter = (counter) => {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver(
         (entries, observer) => {
             entries.forEach(entry => {
-               
+
                 if (entry.isIntersecting) {
                     const counter = entry.target;
                     updateCounter(counter); // Start counting
